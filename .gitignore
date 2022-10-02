@@ -3,3 +3,5 @@ node_modules
 .env
 # ignore .next folder
 .next
+# docker postgres data volume
+data
