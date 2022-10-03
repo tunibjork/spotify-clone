@@ -1,24 +1,12 @@
 import React from "react";
 import NextImage from "next/image";
-import NextLink from "next/link";
-import {
-  Box,
-  Flex,
-  List,
-  ListItem,
-  ListIcon,
-  Divider,
-  Center,
-  LinkBox,
-  LinkOverlay,
-} from "@chakra-ui/layout";
+import { Box, Flex, List, Divider } from "@chakra-ui/layout";
 import {
   MdHome,
   MdSearch,
   MdLibraryMusic,
   MdPlaylistAdd,
   MdFavorite,
-  MdMusicNote,
   MdOutlineQueueMusic,
 } from "react-icons/md";
 import SideMenuItem from "./SideMenuItem";
