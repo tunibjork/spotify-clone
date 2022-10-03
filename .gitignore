@@ -1,6 +1,6 @@
 node_modules
 # Keep environment variables out of version control
-.env
+.env*
 # ignore .next folder
 .next
 # docker postgres data volume
