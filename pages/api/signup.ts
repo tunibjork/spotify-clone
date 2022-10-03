@@ -4,7 +4,7 @@ import cookie from "cookie";
 import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../lib/prisma";
 
-export default async function handler(
+export default async function signUp(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
@@ -33,7 +33,7 @@ export default async function handler(
       id: user?.id,
       time: Date.now(),
     },
-    process.env.JWT_SECRET,
+    process.env.JWT_SECRET as string,
     {
       expiresIn: "8h",
     }
