@@ -30,6 +30,7 @@ specifiers:
   jsonwebtoken: ^8.5.1
   next: 12.2.5
   prettier: ^2.4.1
+  prettier-plugin-prisma: ^4.2.0
   prisma: ^3.6.0
   react: 18.2.0
   react-dom: 18.2.0
@@ -79,6 +80,7 @@ devDependencies:
   eslint-plugin-react: 7.31.8_eslint@8.22.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.22.0
   prettier: 2.7.1
+  prettier-plugin-prisma: 4.2.0_prettier@2.7.1
   prisma: 3.15.2
   ts-node: 10.9.1_jq3ovzqw3j7j4aj2v37zonaj5u
 
@@ -1344,6 +1346,10 @@ packages:
   /@prisma/engines/3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e:
     resolution: {integrity: sha512-NHlojO1DFTsSi3FtEleL9QWXeSF/UjhCW0fgpi7bumnNZ4wj/eQ+BJJ5n2pgoOliTOGv9nX2qXvmHap7rJMNmg==}
     requiresBuild: true
+
+  /@prisma/prisma-fmt-wasm/4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826:
+    resolution: {integrity: sha512-xXE4vjNMlvY2T0MqyOpUwcKnuajn3SDksF23PWtd3mODP5J3rtf1QoqSk99CX1i8Opap/UN0L0VHvPwgE49O7g==}
+    dev: true
 
   /@reach/alert/0.13.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-LDz83AXCrClyq/MWe+0vaZfHp1Ytqn+kgL5VxG7rirUvmluWaj/snxzfNPWn0Ma4K2YENmXXRC/iHt5X95SqIg==}
@@ -3437,6 +3443,16 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
+    dev: true
+
+  /prettier-plugin-prisma/4.2.0_prettier@2.7.1:
+    resolution: {integrity: sha512-7KWA1L1p7PeSLOZJvDFKaik4z9c4SddgMGBkCzwzqUK13LhFhrIq3nyFBMZxoY3jt2gl8HfOiTT44/tCdjIBIQ==}
+    engines: {node: '>=12', npm: '>=7'}
+    peerDependencies:
+      prettier: '>=2'
+    dependencies:
+      '@prisma/prisma-fmt-wasm': 4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826
+      prettier: 2.7.1
     dev: true
 
   /prettier/2.7.1:

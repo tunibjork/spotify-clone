@@ -2,10 +2,14 @@ version: "3.9"
 services:
   db:
     image: postgres
-    restart: always
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydb
+    ports:
+      - 5001:5432
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - ./db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: spotify-clone
+    restart: unless-stopped
+volumes:
+  db_data:

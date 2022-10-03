@@ -4,4 +4,4 @@ node_modules
 # ignore .next folder
 .next
 # docker postgres data volume
-data
+db_data
