@@ -33,7 +33,7 @@ export default async function signUp(
       id: user?.id,
       time: Date.now(),
     },
-    process.env.JWT_SECRET as string,
+    process.env.JWT_SECRET,
     {
       expiresIn: "8h",
     }

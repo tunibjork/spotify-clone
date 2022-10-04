@@ -23,7 +23,7 @@ export default async function signIn(
         email: user.email,
         time: Date.now(),
       },
-      process.env.JWT_SECRET as string,
+      process.env.JWT_SECRET,
       { expiresIn: "8h" }
     );
 
