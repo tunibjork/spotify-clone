@@ -5,7 +5,7 @@ import { IconType } from "react-icons";
 
 interface SideMenuItemProps {
   name: string;
-  icon?: IconType;
+  icon: IconType;
   route: string;
   children?: React.ReactNode;
 }
