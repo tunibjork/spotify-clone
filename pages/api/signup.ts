@@ -27,28 +27,30 @@ export default async function signUp(
     });
   }
 
-  const token = jwt.sign(
-    {
-      email: user?.email,
-      id: user?.id,
-      time: Date.now(),
-    },
-    process.env.JWT_SECRET,
-    {
-      expiresIn: "8h",
-    }
-  );
+  if (user) {
+    const token = jwt.sign(
+      {
+        email: user.email,
+        id: user.id,
+        time: Date.now(),
+      },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "8h",
+      }
+    );
 
-  res.setHeader(
-    "Set-Cookie",
-    cookie.serialize("SPOTIFY_CLONE_ACCESS_TOKEN", token, {
-      httpOnly: true,
-      maxAge: 8 * 60 * 60,
-      path: "/",
-      sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
-    })
-  );
+    res.setHeader(
+      "Set-Cookie",
+      cookie.serialize("SPOTIFY_CLONE_ACCESS_TOKEN", token, {
+        httpOnly: true,
+        maxAge: 8 * 60 * 60,
+        path: "/",
+        sameSite: "lax",
+        secure: process.env.NODE_ENV === "production",
+      })
+    );
 
-  res.json(user);
+    res.json(user);
+  }
 }
