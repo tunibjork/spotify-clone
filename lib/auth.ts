@@ -8,7 +8,7 @@ interface tokenInterface {
 }
 
 export function validateRoute(
-  handler: (req: NextApiRequest, res: NextApiResponse<any>, user: User) => any
+  handler: (req: NextApiRequest, res: NextApiResponse, user: User) => any
 ) {
   return async function (req: NextApiRequest, res: NextApiResponse) {
     const token = req.cookies.SPOTIFY_CLONE_ACCESS_TOKEN;
