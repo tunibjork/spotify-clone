@@ -7,9 +7,9 @@ import {
   MdLibraryMusic,
   MdPlaylistAdd,
   MdFavorite,
-  MdOutlineQueueMusic,
 } from "react-icons/md";
 import SideMenuItem from "./SideMenuItem";
+import { usePlaylist } from "../lib/hooks";
 
 const navMenu = [
   {
@@ -42,15 +42,9 @@ const musicMenu = [
   },
 ];
 
-const playlists = new Array(50).fill("").map((_, i) => {
-  return {
-    name: `Playlist ${i + 1}`,
-    icon: MdOutlineQueueMusic,
-    route: "/",
-  };
-});
-
 export default function Sidebar() {
+  const { playlists } = usePlaylist();
+
   return (
     <Flex
       direction="column"
