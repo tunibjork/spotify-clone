@@ -3,7 +3,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 
 interface PlayerLayoutProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export default function PlayerLayout({
