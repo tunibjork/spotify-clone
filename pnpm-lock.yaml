@@ -14,7 +14,7 @@ specifiers:
   '@types/react': ^17.0.37
   '@typescript-eslint/eslint-plugin': ^5.6.0
   '@typescript-eslint/parser': ^5.6.0
-  babel-plugin-superjson-next: ^0.4.2
+  babel-plugin-superjson-next: ^0.4.4
   bcrypt: ^5.0.1
   cookie: ^0.4.1
   cookies: ^0.8.0
@@ -40,6 +40,7 @@ specifiers:
   react-howler: ^5.2.0
   react-icons: ^4.3.1
   reset-css: ^5.0.1
+  superjson: ^1.10.0
   swr: ^1.1.1
   ts-node: ^10.4.0
   typescript: ^4.8.3
@@ -64,6 +65,7 @@ dependencies:
   react-howler: 5.2.0
   react-icons: 4.4.0_react@18.2.0
   reset-css: 5.0.1
+  superjson: 1.10.0
   swr: 1.3.0_react@18.2.0
   typescript: 4.8.3
 
@@ -75,7 +77,7 @@ devDependencies:
   '@types/react': 17.0.49
   '@typescript-eslint/eslint-plugin': 5.36.2_7v5i3zq2jvt24v6apft6uqrmge
   '@typescript-eslint/parser': 5.36.2_76twfck5d7crjqrmw4yltga7zm
-  babel-plugin-superjson-next: 0.4.4_next@12.2.5
+  babel-plugin-superjson-next: 0.4.4_bytgl7yywtcvvnryaohnfyrzeu
   eslint: 8.22.0
   eslint-config-airbnb: 19.0.4_u65hcuijnk5qhkqg2dixtc2kt4
   eslint-config-next: 12.2.5_76twfck5d7crjqrmw4yltga7zm
@@ -1771,7 +1773,7 @@ packages:
       resolve: 1.22.1
     dev: false
 
-  /babel-plugin-superjson-next/0.4.4_next@12.2.5:
+  /babel-plugin-superjson-next/0.4.4_bytgl7yywtcvvnryaohnfyrzeu:
     resolution: {integrity: sha512-V0BimtxEm1FZOWeG0POliEVN4Y8P9ZbSVVyN78id61U066c/24cUzKyiv6v/hwWQFY61xRFgKXoodrWqd4t9iA==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -1782,6 +1784,7 @@ packages:
       '@babel/types': 7.19.0
       hoist-non-react-statics: 3.3.2
       next: 12.2.5_biqbaboplfbrettd7655fr4n2y
+      superjson: 1.10.0
     dev: true
 
   /balanced-match/1.0.2:
@@ -1911,6 +1914,12 @@ packages:
       depd: 2.0.0
       keygrip: 1.1.0
     dev: false
+
+  /copy-anything/3.0.2:
+    resolution: {integrity: sha512-CzATjGXzUQ0EvuvgOCI6A4BGOo2bcVx8B+eC2nF862iv9fopnPQwlrbACakNCHRIJbCSBj+J/9JeDf60k64MkA==}
+    engines: {node: '>=12.13'}
+    dependencies:
+      is-what: 4.1.7
 
   /copy-to-clipboard/3.3.1:
     resolution: {integrity: sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==}
@@ -2995,6 +3004,10 @@ packages:
       call-bind: 1.0.2
     dev: true
 
+  /is-what/4.1.7:
+    resolution: {integrity: sha512-DBVOQNiPKnGMxRMLIYSwERAS5MVY1B7xYiGnpgctsOFvVDz9f9PFXXxMcTOHuoqYp4NK9qFYQaIC1NRRxLMpBQ==}
+    engines: {node: '>=12.13'}
+
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
@@ -3860,6 +3873,12 @@ packages:
   /stylis/4.0.13:
     resolution: {integrity: sha512-xGPXiFVl4YED9Jh7Euv2V220mriG9u4B2TA6Ybjc1catrstKD2PpIdU3U0RKpkVBC2EhmL/F0sPCr9vrFTNRag==}
     dev: false
+
+  /superjson/1.10.0:
+    resolution: {integrity: sha512-ks6I5fm5KXUbDqt4Epe1VwkKDaC9+kIj5HF7yhiHjChFne0EkFqsnTv1mdHE2IT6fq2CzLC3zeA/fw0BRIoNwA==}
+    engines: {node: '>=10'}
+    dependencies:
+      copy-anything: 3.0.2
 
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
