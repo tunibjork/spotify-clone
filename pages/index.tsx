@@ -5,7 +5,14 @@ import GradientLayout from "../components/gradientLayout";
 
 export default function Home() {
   return (
-    <GradientLayout color="yellow" image="/vercel.svg" roundImage={true}>
+    <GradientLayout
+      color="yellow"
+      image=""
+      roundImage={false}
+      subtitle="profile"
+      title="Samuel Fanhais"
+      details="15 public playlists"
+    >
       <div>home page</div>
     </GradientLayout>
   );
