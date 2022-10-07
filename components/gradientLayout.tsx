@@ -19,6 +19,7 @@ export default function GradientLayout({
   subtitle,
   title,
   details,
+  children,
 }: GradientLayoutProps) {
   return (
     <Box
@@ -49,6 +50,7 @@ export default function GradientLayout({
           </Text>
         </Box>
       </Flex>
+      <Box paddingY="40px">{children}</Box>
     </Box>
   );
 }
