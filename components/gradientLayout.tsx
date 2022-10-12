@@ -45,7 +45,7 @@ export default function GradientLayout({
           <Text fontSize="6xl" fontWeight="bold">
             {title}
           </Text>
-          <Text fontSize="x-small" fontWeight="normal">
+          <Text fontSize="md" fontWeight="normal">
             {details}
           </Text>
         </Box>
