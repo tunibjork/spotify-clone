@@ -21,3 +21,13 @@ export function usePlaylist() {
     isError: error,
   };
 }
+
+export function usePlaylistCount() {
+  const { data, error } = useSWR("/playlistCount", fetcher);
+
+  return {
+    playlistCount: (data as number) || "No",
+    isLoading: !data && !error,
+    isError: error,
+  };
+}
